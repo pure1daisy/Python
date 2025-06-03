@@ -1,0 +1,29 @@
+import random 
+while True:
+    number = random.randint(1,10) #chooses a random number between 1 and 10 
+    
+    print("")
+    question = input("Ask any yes or no question?") #allows the user to ask a question
+    print("")
+    
+    if number == 1: #the choice changes depending on what the random number is 
+        print("It is certain.")
+    elif number == 2:
+        print("Without a doubt.")
+    elif number == 3:
+        print("Most likely.")
+    elif number == 4:
+        print("Yes.")
+    elif number == 5:
+        print("Reply hazy, try again.")
+    elif number == 6:
+        print("Cannot predict now.")
+    elif number == 7:
+        print("Don't count on it.")
+    elif number == 8:
+        print("My sources say no.")
+    elif number == 9:
+        print("Very doubtful.")
+    elif number == 10:
+        print("No.")
+    
