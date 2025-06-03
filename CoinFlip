@@ -1,0 +1,17 @@
+import random
+score = 5
+while score >= 1:
+    number = random.randint(1,2)
+    
+    player = int(input("Heads(1) or Tails(2)?"))
+    
+    if player == number:
+        score = score + 1
+    else:
+        score = score - 1 
+
+    print("Your score is",score)
+print("")
+print("You fail.")
+    
+    
