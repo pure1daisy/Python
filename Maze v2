@@ -1,0 +1,51 @@
+import random
+
+score = 0
+
+combat = ["Zombie", "Skeleton", "Bat"]
+
+def Empty():
+    print("This room is empty.")
+def Chest():
+    score += 5
+    print("You found a chest containing 5 points. Your score is now",score)
+def Exit():
+    print(f"You have found the exit of the maze. Your current score is {score}")
+    question = int(input("Do you want to continue(1)? Or do you want to leave the maze(2)?"))
+    if question == 2:
+        maze = False
+    else:
+        print("You continue through the maze")
+def Enemy():
+    print("You meet a {combat[random.randint(0,2)]}")
+
+
+rooms = [Empty(), Chest(), Exit(), Enemy()]
+
+for i in range (1,6):
+    if i == 1:
+        room1 = rooms[random.randint(0,4)]
+    elif i == 2:
+        room2 = rooms[random.randint(0,4)]
+    elif i == 3:
+        room3 = rooms[random.randint(0,4)]
+    elif i == 4:
+        room4 = rooms[random.randint(0,4)]
+    elif i == 5:
+        room5 = rooms[random.randint(0,4)]
+    elif i == 6:
+        room6 = rooms[random.randint(0,4)]
+
+
+location = int(input("Do you go Forward(1), Backward(2), Left(3) or Right(4)"))
+def direction(x):
+    if x == 1:
+        print(f"You take a step Forward and are now in {room1}")
+    elif x == 2:
+        print(f"You take a step Backward and are now in {room2}")
+    elif x == 3:
+        print(f"You take a step Left and are now in {room3}")
+    else:
+        print(f"You take a step right and are now in {room4}")
+
+direction(location)
