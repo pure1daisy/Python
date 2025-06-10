@@ -1,0 +1,50 @@
+import random
+maze = True
+score = 0
+x = 0
+y = 0
+direction = 0
+
+print("Welcome to a maze that changes each time you play.")
+print("")
+print("All inputs in this game will be with numbers usualy shown in the")
+print("text to show what number links to what action/choice.")
+print("")
+
+
+
+while maze:
+    direction = int(input("Do you go Forward(1), Backward(2), Left(3) or Right(4)"))
+    if direction == 1:
+        y = y - 1
+    elif direction == 2:
+        y = y + 1
+    elif direction == 3:
+        x = x - 1
+    elif direction == 4:
+        x = x + 1
+    print(f"Your current location is {x,y}.")
+
+    print(y,"",x)
+
+    if x == 0 and y == 0:
+        print("This is the beginning of the maze, your current score is",score)
+    elif x == 1 and y == 0:
+        score = score + 5
+        print("You found a chest containing 5 points. Your score is now",score)
+    elif x == 2 and y == 0:
+        print("Placeholder")
+    elif x == -1 and y == 0:
+        print("Placeholder")
+    elif x == -2 and y == 0:
+        print("Placeholder")
+    elif x == 0 and y == 1:
+        print("Placeholder")
+    elif x == 0 and y == 2:
+        print("Placeholder")
+    elif x == 0 and y == -1:
+        print("Placeholder")
+    elif x == 0 and y == -2:
+        print("Placeholder")
+
+
